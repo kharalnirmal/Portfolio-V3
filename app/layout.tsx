@@ -5,6 +5,7 @@ import "lenis/dist/lenis.css";
 import "./globals.css";
 import SmoothScroll from "@/components/smooth-scroll/SmoothScroll";
 import { caveat, clashDisplay, DepartureMono } from "./font";
+import { siteDescription, siteName, siteTitle, siteUrl } from "./seo";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,32 +18,57 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.nirmalkharal.dev"),
-  title: "Hey !",
-  description:
-    "Portfolio of Nirmal Kharal, a full-stack developer creating thoughtful interfaces and robust systems.",
+  metadataBase: new URL(siteUrl),
+  title: siteTitle,
+  description: siteDescription,
+  applicationName: siteName,
+  authors: [{ name: siteName, url: siteUrl }],
+  creator: siteName,
+  publisher: siteName,
+  keywords: [
+    "Nirmal Kharal",
+    "full-stack developer",
+    "full-stack developer Nepal",
+    "Next.js developer",
+    "React developer",
+    "TypeScript developer",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
-    title: "Hey !",
-    description:
-      "Portfolio of Nirmal Kharal, a full-stack developer creating thoughtful interfaces and robust systems.",
-    url: "https://www.nirmalkharal.dev",
-    siteName: "Nirmal Kharal",
+    title: siteTitle,
+    description: siteDescription,
+    url: "/",
+    siteName,
+    locale: "en_US",
     type: "website",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Nirmal Kharal Portfolio",
+        alt: "Nirmal Kharal, Full-Stack Developer in Lumbini, Nepal",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Hey !",
-    description:
-      "Portfolio of Nirmal Kharal, a full-stack developer creating thoughtful interfaces and robust systems.",
+    title: siteTitle,
+    description: siteDescription,
     images: ["/og-image.png"],
   },
 };

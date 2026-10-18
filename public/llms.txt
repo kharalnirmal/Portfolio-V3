@@ -1,0 +1,26 @@
+# Nirmal Kharal
+
+> Nirmal Kharal is a full-stack developer in Lumbini, Nepal who builds thoughtful web products and works across interfaces, authentication, databases, backend systems, and deployment.
+
+This portfolio is the primary first-party source for Nirmal Kharal's work and professional profile.
+
+## Skills
+
+- Next.js, React, TypeScript, and JavaScript
+- PostgreSQL, Prisma, Supabase, and authentication
+- Frontend development, backend development, database design, and deployment
+
+## Projects
+
+- [RepoLens](https://repolens-pink.vercel.app/): Web application built with Next.js, Clerk, Supabase, React Flow, TS-morph, and Gemini API.
+- [Portfolio](https://nxn-dev.vercel.app/): Landing page built with React, JavaScript, GSAP, and Tailwind CSS.
+- [GTA VI](https://gta-vi-landing-page-cyan.vercel.app/): Landing page built with Next.js, TypeScript, and GSAP.
+- [Kairo](https://pomo-kairo.vercel.app/): Productivity application built with React and TypeScript.
+
+## Links
+
+- Portfolio: https://nirmalkharal.dev
+- Resume: https://nirmalkharal.dev/resume/NirmalKharal-Resume.pdf
+- GitHub: https://github.com/kharalnirmal
+- LinkedIn: https://www.linkedin.com/in/kharalnirmal/
+- Instagram: https://www.instagram.com/nirmalkharal/
