@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/opengraph.png",
         width: 1200,
         height: 630,
         alt: "Nirmal Kharal, Full-Stack Developer in Lumbini, Nepal",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteTitle,
     description: siteDescription,
-    images: ["/og-image.png"],
+    images: ["/opengraph.png"],
   },
 };
 

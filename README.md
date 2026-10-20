@@ -14,7 +14,7 @@
 <br />
 
 <a href="https://www.nirmalkharal.dev" aria-label="Visit Nirmal Kharal's portfolio">
-  <img src="./public/og-image.png" alt="Preview of Nirmal Kharal's interactive portfolio" width="100%" />
+  <img src="./public/opengraph.png" alt="Preview of Nirmal Kharal's interactive portfolio" width="100%" />
 </a>
 
 <sub>CLICK THE PREVIEW TO EXPLORE</sub>
