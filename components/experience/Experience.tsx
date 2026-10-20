@@ -22,7 +22,7 @@ const experiences: ExperienceItemType[] = [
     positions: [
       {
         id: "aiesec-nst-dev",
-        title: "Frontend Developer — National Support Team",
+        title: "Full-Stack Developer — National Support Team",
         employmentPeriod: { start: "2.2026", end: "7.2026" },
         employmentType: "Part-time",
         icon: <Code2 />,
