@@ -189,7 +189,7 @@ export default function Experience() {
     >
       <div
         aria-hidden="true"
-        className="-z-10 absolute inset-0 opacity-[0.035] dark:opacity-[0.06] pointer-events-none [background-image:linear-gradient(to_right,currentColor_1px,transparent_1px),linear-gradient(to_bottom,currentColor_1px,transparent_1px)] [background-size:40px_40px] [mask-image:linear-gradient(to_bottom,transparent,black_16%,black_84%,transparent)] sm:[background-size:64px_64px]"
+        className="-z-10 absolute inset-0 opacity-[0.02] dark:opacity-[0.035] pointer-events-none [background-image:linear-gradient(to_right,currentColor_1px,transparent_1px),linear-gradient(to_bottom,currentColor_1px,transparent_1px)] [background-size:40px_40px] [mask-image:linear-gradient(to_bottom,transparent,black_16%,black_84%,transparent)] sm:[background-size:64px_64px]"
       />
       <h2 className="z-10 relative font-[family-name:var(--font-clash)] font-semibold text-4xl sm:text-6xl text-center tracking-tight">
         <span className="max-[1024px]:[&>svg]:hidden">

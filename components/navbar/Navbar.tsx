@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useReducedMotion } from "motion/react";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 import { MobiusLoopIcon } from "@/components/ui/mobius-loop-icon";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
@@ -185,6 +185,17 @@ export default function Navbar() {
               className="place-items-center grid hover:bg-foreground/8 rounded-full focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 size-10 text-foreground/70 hover:text-foreground transition-colors"
             >
               <FaGithub className="size-5" aria-hidden="true" />
+            </a>
+            <span className="bg-border w-px h-6" aria-hidden="true" />
+            <a
+              href="https://www.linkedin.com/in/kharalnirmal/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Visit Nirmal Kharal on LinkedIn"
+              title="LinkedIn"
+              className="place-items-center grid hover:bg-foreground/8 rounded-full focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 size-10 text-foreground/70 hover:text-foreground transition-colors"
+            >
+              <FaLinkedinIn className="size-5" aria-hidden="true" />
             </a>
           </div>
         </nav>
