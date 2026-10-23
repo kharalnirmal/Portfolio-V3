@@ -32,7 +32,7 @@ export default function About() {
             {details.map((detail) => (
               <li
                 key={detail}
-                className="group flex gap-3 sm:gap-4 text-[0.9rem] text-foreground/65 sm:text-[0.95rem] hover:text-foreground/90 leading-6 sm:leading-[1.625rem] transition-colors duration-300"
+                className="flex gap-3 sm:gap-4 text-[0.9rem] text-foreground/85 sm:text-[0.95rem] leading-6 sm:leading-[1.625rem]"
               >
                 <Image
                   src="/arrow/rotated-right-arrow-svgrepo-com.svg"
@@ -41,7 +41,7 @@ export default function About() {
                   alt=""
                   aria-hidden="true"
                   loading="eager"
-                  className="opacity-45 dark:invert mt-0.5 size-4 sm:size-5 -rotate-12 transition-transform motion-reduce:transition-none group-hover:translate-x-1 duration-300 ease-out shrink-0"
+                  className="opacity-45 dark:invert mt-0.5 size-4 sm:size-5 -rotate-12 shrink-0"
                 />
                 <span>{detail}</span>
               </li>

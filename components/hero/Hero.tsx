@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { SpotlightLogo } from "@/components/ui/spotlight-logo";
 import { Highlighter } from "@/components/ui/highlighter";
@@ -25,15 +26,20 @@ export default function Hero() {
                 className="opacity-55 dark:invert size-9 sm:size-14 lg:size-20 rotate-[380]"
               />
               <div className="font-[family-name:var(--font-caveat)] text-2xl sm:text-3xl lg:text-4xl text-center leading-none whitespace-nowrap -rotate-40">
-                <Highlighter
-                  action="underline"
-                  color="var(--portfolio-accent)"
-                  isView
-                  padding={-55}
+                <Link
+                  href="#about"
+                  className="pointer-events-auto focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                 >
-                  <span>About Me</span>
-                </Highlighter>
-                <span className="block mt-2 sm:mt-2.5 text-muted-foreground text-sm sm:text-base lg:text-xl lowercase tracking-wide">
+                  <Highlighter
+                    action="underline"
+                    color="var(--portfolio-accent)"
+                    isView
+                    padding={-55}
+                  >
+                    <span>About Me</span>
+                  </Highlighter>
+                </Link>
+                <span className="block mt-0.5 sm:mt-1 text-muted-foreground text-sm sm:text-base lg:text-xl lowercase tracking-wide">
                   Scroll Down
                 </span>
               </div>
