@@ -236,6 +236,9 @@
     filter 0.3s,
     transform 0.3s;
 }
+:global(.dark) .connectButton {
+  background-color: #8200db;
+}
 .connectArrow {
   position: relative;
   width: 38px;
