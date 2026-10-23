@@ -25,14 +25,6 @@ export const metadata: Metadata = {
   authors: [{ name: siteName, url: siteUrl }],
   creator: siteName,
   publisher: siteName,
-  keywords: [
-    "Nirmal Kharal",
-    "full-stack developer",
-    "full-stack developer Nepal",
-    "Next.js developer",
-    "React developer",
-    "TypeScript developer",
-  ],
   alternates: {
     canonical: "/",
   },
