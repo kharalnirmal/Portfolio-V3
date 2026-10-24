@@ -23,30 +23,12 @@
 
 ---
 
-```text
-an idea
-   |
-   +--- structure
-   +--- interaction
-   +--- character
-   |
-   `---> something worth remembering
-```
-
 ## A Little About Me
 
 I am **Nirmal**, a full-stack developer from Nepal. I enjoy turning early ideas into expressive, useful experiences for the web.
 
 For me, good development is not only about making something function. It is about rhythm, clarity, movement, and all the small decisions that make an interface feel considered.
 
-```ts
-const approach = {
-  think: "with curiosity",
-  build: "with intention",
-  refine: "until it feels right",
-  repeat: true,
-};
-```
 
 ## The Creative Toolkit
 
