@@ -49,7 +49,7 @@ const projects: Project[] = [
     name: "GTA VI",
     category: "Landing Page",
     description:
-      "A fan-made GTA VI landing page with bold visuals and smooth animations inspired by the game.",
+      "A fan made GTA VI landing page with bold visuals and smooth animations inspired by the game.",
     tools: "Next.js, TypeScript, GSAP",
     image: "/projects/gta-v2.png",
     alt: "GTA VI landing page",
