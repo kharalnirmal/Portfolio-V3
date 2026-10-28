@@ -1,6 +1,12 @@
 import localFont from "next/font/local";
-import { Caveat } from "next/font/google";
-import { Great_Vibes } from "next/font/google";
+import { Caveat, DM_Sans, Great_Vibes } from "next/font/google";
+
+export const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
+  display: "swap",
+  fallback: ["Arial", "sans-serif"],
+});
 
 export const clashDisplay = localFont({
   src: [

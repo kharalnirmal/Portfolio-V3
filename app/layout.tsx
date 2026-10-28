@@ -1,16 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "lenis/dist/lenis.css";
 import "./globals.css";
 import SmoothScroll from "@/components/smooth-scroll/SmoothScroll";
-import { caveat, clashDisplay, DepartureMono } from "./font";
+import { caveat, clashDisplay, DepartureMono, dmSans } from "./font";
 import { siteDescription, siteName, siteTitle, siteUrl } from "./seo";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -80,7 +75,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable} ${caveat.variable} ${clashDisplay.variable} ${DepartureMono.variable} h-full antialiased`}
+      className={`${dmSans.variable} ${geistMono.variable} ${caveat.variable} ${clashDisplay.variable} ${DepartureMono.variable} h-full antialiased`}
     >
       <body className="flex flex-col min-h-full">
         <SmoothScroll>{children}</SmoothScroll>

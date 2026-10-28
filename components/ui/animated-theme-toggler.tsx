@@ -164,8 +164,38 @@ export const AnimatedThemeToggler = ({
   const [internalIsDark, setInternalIsDark] = useState(false)
   const isDark = isControlled ? theme === "dark" : internalIsDark
   const buttonRef = useRef<HTMLButtonElement>(null)
+  const audioContextRef = useRef<AudioContext | null>(null)
   const isTransitioningRef = useRef(false)
   const activeAnimRef = useRef<Animation | null>(null)
+
+  const playToggleSound = useCallback(() => {
+    try {
+      const context =
+        audioContextRef.current ??
+        (audioContextRef.current = new AudioContext())
+      const startTime = context.currentTime
+      const oscillator = context.createOscillator()
+      const gain = context.createGain()
+
+      oscillator.type = "triangle"
+      oscillator.frequency.setValueAtTime(isDark ? 460 : 620, startTime)
+      oscillator.frequency.exponentialRampToValueAtTime(
+        isDark ? 320 : 440,
+        startTime + 0.045
+      )
+      gain.gain.setValueAtTime(0.018, startTime)
+      gain.gain.exponentialRampToValueAtTime(0.0001, startTime + 0.045)
+
+      oscillator.connect(gain)
+      gain.connect(context.destination)
+      oscillator.start(startTime)
+      oscillator.stop(startTime + 0.045)
+
+      if (context.state === "suspended") void context.resume()
+    } catch {
+      // Theme switching should still work when audio is unavailable.
+    }
+  }, [isDark])
 
   const cancelAnim = useCallback(() => {
     activeAnimRef.current?.cancel()
@@ -175,6 +205,11 @@ export const AnimatedThemeToggler = ({
   useEffect(() => {
     return () => {
       cancelAnim()
+      const audioContext = audioContextRef.current
+      audioContextRef.current = null
+      if (audioContext && audioContext.state !== "closed") {
+        void audioContext.close()
+      }
       const root = document.documentElement
       if (root.dataset.magicuiThemeVt !== "active") return
       delete root.dataset.magicuiThemeVt
@@ -209,6 +244,8 @@ export const AnimatedThemeToggler = ({
       document.documentElement.dataset.magicuiThemeVt === "active"
     )
       return
+
+    playToggleSound()
 
     // innerWidth/innerHeight (not visualViewport): percentages must resolve
     // against the snapshot reference box, which includes classic scrollbars.
@@ -315,6 +352,7 @@ export const AnimatedThemeToggler = ({
     isControlled,
     onThemeChange,
     cancelAnim,
+    playToggleSound,
   ])
 
   return (

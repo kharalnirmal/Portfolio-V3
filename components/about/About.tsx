@@ -1,9 +1,9 @@
 import Image from "next/image";
 
 const details = [
-  "Full-stack developer focused on building real web products and understanding the systems behind them from interface and authentication to database design and deployment.",
-  "Currently working with Next.js, React, TypeScript, PostgreSQL and Prisma while learning how production-grade applications are structured, maintained, and shipped.",
-  "I enjoy experimenting with product ideas, interaction design, backend architecture, and the small details that make software feel polished and intentional.",
+  "I am a FullStack developer who enjoys turning ideas into applications people can use. I care about the logic behind each feature and the details that make an interface feel clean and intuitive.",
+  "I build and deploy web applications with a focus on system design, reliability, and maintainable code.",
+  "I am also exploring generative AI and practical ways to integrate it into the applications I build.",
 ];
 
 export default function About() {
@@ -11,7 +11,7 @@ export default function About() {
     <section
       id="about"
       aria-labelledby="about-heading"
-      className="z-10 isolate relative bg-background px-6 pt-12 pb-6 sm:px-8 sm:pt-18 sm:pb-8 lg:pt-22 lg:pb-10 border-foreground/10 border-t overflow-hidden"
+      className="z-10 isolate relative bg-background px-6 sm:px-8 pt-12 sm:pt-18 lg:pt-22 pb-6 sm:pb-8 lg:pb-10 border-foreground/10 border-t overflow-hidden"
     >
       <div
         aria-hidden="true"
@@ -22,7 +22,7 @@ export default function About() {
         <div className="z-10 relative">
           <h2
             id="about-heading"
-            className="max-w-3xl font-[family-name:var(--font-clash)] font-semibold text-[2.35rem] text-foreground sm:text-[clamp(2.7rem,5.4vw,5rem)] min-[380px]:text-[2.65rem] leading-[0.96] sm:leading-[0.92] tracking-[0.03em] sm:tracking-[0.035em]"
+            className="max-w-3xl font-[family-name:var(--font-clash)] font-semibold text-[2.35rem] text-foreground sm:text-[clamp(2.7rem,5.4vw,5rem)] min-[380px]:text-[2.65rem] leading-[0.96] sm:leading-[0.92] lg:leading-[0.84] tracking-[0.03em] sm:tracking-[0.035em]"
           >
             NIRMAL
             <span className="block">KHARAL</span>
@@ -32,7 +32,7 @@ export default function About() {
             {details.map((detail) => (
               <li
                 key={detail}
-                className="flex gap-3 sm:gap-4 text-[0.9rem] text-foreground/85 sm:text-[0.95rem] leading-6 sm:leading-[1.625rem]"
+                className="flex gap-3 sm:gap-4 text-[0.9rem] text-foreground/85 sm:text-[0.95rem] lg:text-[1.05rem] leading-6 sm:leading-[1.625rem] lg:leading-7"
               >
                 <Image
                   src="/arrow/rotated-right-arrow-svgrepo-com.svg"
