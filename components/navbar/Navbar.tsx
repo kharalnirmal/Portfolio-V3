@@ -167,35 +167,35 @@ export default function Navbar() {
           <div
             ref={controlsRef}
             inert={isCollapsed}
-            className="flex items-center gap-2 sm:gap-3 ml-auto"
+            className="flex items-center gap-1 sm:gap-3 ml-auto"
           >
             <AnimatedThemeToggler
               variant="circle"
               aria-label="Toggle color theme"
               title="Toggle color theme"
-              className="place-items-center grid hover:bg-foreground/8 rounded-full focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 size-10 [&_svg]:size-[1.1rem] text-foreground/70 hover:text-foreground transition-colors"
+              className="place-items-center grid hover:bg-foreground/8 rounded-full focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 size-8 sm:size-10 [&_svg]:size-4 sm:[&_svg]:size-[1.1rem] text-foreground/70 hover:text-foreground transition-colors"
             />
-            <span className="bg-border w-px h-6" aria-hidden="true" />
+            <span className="bg-border w-px h-5 sm:h-6" aria-hidden="true" />
             <a
               href="https://github.com/kharalnirmal"
               target="_blank"
               rel="noreferrer"
               aria-label="Visit Nirmal Kharal on GitHub"
               title="GitHub"
-              className="place-items-center grid hover:bg-foreground/8 rounded-full focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 size-10 text-foreground/70 hover:text-foreground transition-colors"
+              className="place-items-center grid hover:bg-foreground/8 rounded-full focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 size-8 sm:size-10 text-foreground/70 hover:text-foreground transition-colors"
             >
-              <FaGithub className="size-5" aria-hidden="true" />
+              <FaGithub className="size-4 sm:size-5" aria-hidden="true" />
             </a>
-            <span className="bg-border w-px h-6" aria-hidden="true" />
+            <span className="bg-border w-px h-5 sm:h-6" aria-hidden="true" />
             <a
               href="https://www.linkedin.com/in/kharalnirmal/"
               target="_blank"
               rel="noreferrer"
               aria-label="Visit Nirmal Kharal on LinkedIn"
               title="LinkedIn"
-              className="place-items-center grid hover:bg-foreground/8 rounded-full focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 size-10 text-foreground/70 hover:text-foreground transition-colors"
+              className="place-items-center grid hover:bg-foreground/8 rounded-full focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 size-8 sm:size-10 text-foreground/70 hover:text-foreground transition-colors"
             >
-              <FaLinkedinIn className="size-5" aria-hidden="true" />
+              <FaLinkedinIn className="size-4 sm:size-5" aria-hidden="true" />
             </a>
           </div>
         </nav>
