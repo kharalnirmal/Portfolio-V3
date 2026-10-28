@@ -15,6 +15,7 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 interface Project {
   name: string;
   category: string;
+  description: string;
   tools: string;
   image: string;
   alt: string;
@@ -26,23 +27,29 @@ const projects: Project[] = [
   {
     name: "Repolens",
     category: "Web Application",
+    description:
+      "A codebase explorer that shows how repository files connect and which files a code change may affect.",
     tools: "Next.js, Clerk, Supabase, ReactFlow, TS-morph, Gemini-API",
     image: "/projects/repolensv2.png",
     alt: "Repolens",
     link: "https://repolens-pink.vercel.app/",
   },
   {
-    name: "Portfolio",
-    category: "Landing Page",
-    tools: "React, Javascript, GSAP, Tailwind",
-    image: "/projects/portfolio-v2.png",
-    alt: "portfolio",
-    link: "https://nxn-dev.vercel.app/",
+    name: "ControlDesk",
+    category: "Dashboard Application",
+    description:
+      "A dashboard for managing products and categories in one place.",
+    tools: "Next.js, TypeScript, Product and Category Management",
+    image: "/projects/controldesk.png",
+    alt: "ControlDesk inventory management dashboard",
+    link: "https://control-desk-omega.vercel.app/dashboard",
   },
 
   {
     name: "GTA VI",
     category: "Landing Page",
+    description:
+      "A fan-made GTA VI landing page with bold visuals and smooth animations inspired by the game.",
     tools: "Next.js, TypeScript, GSAP",
     image: "/projects/gta-v2.png",
     alt: "GTA VI landing page",
@@ -51,6 +58,8 @@ const projects: Project[] = [
   {
     name: "Kairo",
     category: "Productivity App",
+    description:
+      "A Pomodoro app that helps users plan focused work sessions and avoid distractions.",
     tools: "React, TypeScript",
     image: "/projects/kairo-v2.png",
     alt: "Kairo productivity application",
@@ -131,12 +140,13 @@ const Work = () => {
                   <h3>{String(index + 1).padStart(2, "0")}</h3>
 
                   <div>
-                    <h4>{project.name}</h4>
-                    <p>{project.category}</p>
+                    <h4 className={styles.projectName}>{project.name}</h4>
+                    <p className={styles.projectCopy}>{project.category}</p>
                   </div>
                 </div>
-                <h4>Tools and features</h4>
-                <p>{project.tools}</p>
+                <p className={styles.projectCopy}>{project.description}</p>
+                <h4 className={styles.toolsHeading}>Tools and features</h4>
+                <p className={styles.projectCopy}>{project.tools}</p>
               </div>
               <WorkImage
                 image={project.image}

@@ -80,6 +80,10 @@
   margin: 0;
   font-family: var(--font-clash);
 }
+.workInfo .projectName {
+  font-size: 21px;
+  font-weight: 500;
+}
 .workInfo p {
   font-weight: 200;
   color: #adacac;
@@ -87,7 +91,13 @@
   margin-top: 3px;
 }
 .workInfo > p {
-  width: 90%;
+  width: 100%;
+}
+.workInfo .projectCopy {
+  font-weight: 300;
+}
+.workInfo .toolsHeading {
+  margin-top: 14px;
 }
 .workImage {
   display: flex;
@@ -321,6 +331,9 @@
   .workInfo h4 {
     font-size: 15px;
   }
+  .workInfo .projectName {
+    font-size: 18px;
+  }
   .workBox {
     width: 450px;
     padding: 50px;
@@ -389,6 +402,9 @@
   }
   .workInfo h4 {
     font-size: clamp(18px, 2.5vw, 22px);
+  }
+  .workInfo .projectName {
+    font-size: clamp(21px, 3vw, 25px);
   }
   .workInfo p {
     font-size: clamp(15px, 2vw, 18px);
