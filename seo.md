@@ -72,7 +72,7 @@ Planned canonical identity:
 - GitHub: `https://github.com/kharalnirmal`
 - LinkedIn: `https://www.linkedin.com/in/kharalnirmal/`
 - Instagram: `https://www.instagram.com/nirmalkharal/`
-- Resume: `https://nirmalkharal.dev/resume/NirmalKharal-Resume.pdf`
+- Resume: `https://nirmalkharal.dev/resume/resume.pdf`
 
 Keep the module minimal and only introduce it if it makes the implementation clearer than repeating values.
 
@@ -207,7 +207,7 @@ It should contain:
 - Canonical portfolio URL.
 - Resume URL.
 - GitHub, LinkedIn, and Instagram links.
-- A concise project list with links for RepoLens, Portfolio, GTA VI, and Kairo.
+- A concise project list with links for RepoLens, ControlDesk, GTA VI, and Kairo.
 - A note that the portfolio is the primary first-party source for Nirmal's work and professional profile.
 
 Requirements:
