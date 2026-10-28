@@ -47,7 +47,7 @@ export default function Hero() {
 
             <div className="relative flex justify-center mt-2 sm:mt-3 pt-6 sm:pt-10 min-h-20 sm:min-h-32">
               <a
-                href="/resume/NirmalKharal-Resume.pdf"
+                href="/resume/resume.pdf"
                 target="_blank"
                 rel="noreferrer"
                 className="z-10 relative flex flex-col items-center focus-visible:outline-none font-[family-name:var(--font-caveat)] text-4xl sm:text-5xl leading-none -rotate-6 transition-transform translate-x-6 sm:translate-x-12 hover:-translate-y-1"

@@ -8,7 +8,7 @@
 
 [Portfolio](https://www.nirmalkharal.dev) &nbsp;&middot;&nbsp;
 [LinkedIn](https://www.linkedin.com/in/kharalnirmal/) &nbsp;&middot;&nbsp;
-[Resume](./public/resume/NirmalKharal-Resume.pdf) &nbsp;&middot;&nbsp;
+[Resume](./public/resume/resume.pdf) &nbsp;&middot;&nbsp;
 [Say hello](mailto:nirmalkharal40@gmail.com?subject=Hello%20Nirmal)
 
 <br />
