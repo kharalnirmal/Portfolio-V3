@@ -5,6 +5,8 @@ import { Moon, Sun } from "lucide-react"
 import { flushSync } from "react-dom"
 
 import { cn } from "@/lib/utils"
+import { clickSoftSound } from "@/lib/click-soft"
+import { playSound } from "@/lib/sound-engine"
 
 export type TransitionVariant =
   | "circle"
@@ -164,38 +166,15 @@ export const AnimatedThemeToggler = ({
   const [internalIsDark, setInternalIsDark] = useState(false)
   const isDark = isControlled ? theme === "dark" : internalIsDark
   const buttonRef = useRef<HTMLButtonElement>(null)
-  const audioContextRef = useRef<AudioContext | null>(null)
   const isTransitioningRef = useRef(false)
   const activeAnimRef = useRef<Animation | null>(null)
 
   const playToggleSound = useCallback(() => {
-    try {
-      const context =
-        audioContextRef.current ??
-        (audioContextRef.current = new AudioContext())
-      const startTime = context.currentTime
-      const oscillator = context.createOscillator()
-      const gain = context.createGain()
-
-      oscillator.type = "triangle"
-      oscillator.frequency.setValueAtTime(isDark ? 460 : 620, startTime)
-      oscillator.frequency.exponentialRampToValueAtTime(
-        isDark ? 320 : 440,
-        startTime + 0.045
-      )
-      gain.gain.setValueAtTime(0.018, startTime)
-      gain.gain.exponentialRampToValueAtTime(0.0001, startTime + 0.045)
-
-      oscillator.connect(gain)
-      gain.connect(context.destination)
-      oscillator.start(startTime)
-      oscillator.stop(startTime + 0.045)
-
-      if (context.state === "suspended") void context.resume()
-    } catch {
+    const volume = window.matchMedia("(max-width: 767px)").matches ? 0.4 : 0.8
+    void playSound(clickSoftSound.dataUri, { volume }).catch(() => {
       // Theme switching should still work when audio is unavailable.
-    }
-  }, [isDark])
+    })
+  }, [])
 
   const cancelAnim = useCallback(() => {
     activeAnimRef.current?.cancel()
@@ -205,11 +184,6 @@ export const AnimatedThemeToggler = ({
   useEffect(() => {
     return () => {
       cancelAnim()
-      const audioContext = audioContextRef.current
-      audioContextRef.current = null
-      if (audioContext && audioContext.state !== "closed") {
-        void audioContext.close()
-      }
       const root = document.documentElement
       if (root.dataset.magicuiThemeVt !== "active") return
       delete root.dataset.magicuiThemeVt
