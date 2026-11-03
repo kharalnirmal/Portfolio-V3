@@ -61,7 +61,6 @@ export default function Navbar() {
             aria-label={
               isCollapsed ? "Expand navigation" : "Collapse navigation"
             }
-            title={isCollapsed ? "Expand navigation" : "Collapse navigation"}
             className={`absolute left-1/2 grid -translate-x-1/2 place-items-center rounded-full text-foreground/80 transition-[width,height,color,background-color] duration-200 motion-reduce:transition-none hover:bg-foreground/8 hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring ${isCollapsed ? "size-10" : "size-12"}`}
           >
             <MobiusLoopIcon
@@ -76,7 +75,6 @@ export default function Navbar() {
             <AnimatedThemeToggler
               variant="circle"
               aria-label="Toggle color theme"
-              title="Toggle color theme"
               className="place-items-center grid hover:bg-foreground/8 rounded-full focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 size-7 min-[375px]:size-8 sm:size-10 [&_svg]:size-4 sm:[&_svg]:size-[1.1rem] text-foreground/70 hover:text-foreground transition-colors"
             />
             <span className="hidden min-[375px]:block bg-border w-px h-5 sm:h-6" aria-hidden="true" />
@@ -85,7 +83,6 @@ export default function Navbar() {
               target="_blank"
               rel="noreferrer"
               aria-label="Visit Nirmal Kharal on GitHub"
-              title="GitHub"
               className="place-items-center grid hover:bg-foreground/8 rounded-full focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 size-7 min-[375px]:size-8 sm:size-10 text-foreground/70 hover:text-foreground transition-colors"
             >
               <FaGithub className="size-4 sm:size-5" aria-hidden="true" />
@@ -96,7 +93,6 @@ export default function Navbar() {
               target="_blank"
               rel="noreferrer"
               aria-label="Visit Nirmal Kharal on LinkedIn"
-              title="LinkedIn"
               className="place-items-center grid hover:bg-foreground/8 rounded-full focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 size-7 min-[375px]:size-8 sm:size-10 text-foreground/70 hover:text-foreground transition-colors"
             >
               <FaLinkedinIn className="size-4 sm:size-5" aria-hidden="true" />
