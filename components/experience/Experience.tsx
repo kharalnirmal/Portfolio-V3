@@ -17,6 +17,7 @@ const experiences: ExperienceItemType[] = [
   {
     id: "inovex-media-tech",
     companyName: "Inovex Media Tech",
+    companyWebsite: "https://www.inovexmediatech.com/",
     companyLogo: "/company/innovex.png",
     companyLogoDark: "/company/white logo.png",
     companyLogoClassName: "p-0.5",
@@ -44,6 +45,8 @@ const experiences: ExperienceItemType[] = [
   {
     id: "aiesec-nepal",
     companyName: "AIESEC in Nepal",
+    companyWebsite:
+      "https://www.linkedin.com/company/aiesec-nepal/posts/?feedView=all",
     companyLogo: "/company/Aiesec-blue.png",
     companyLogoDark: "/company/aiesec-white.png",
     positions: [
@@ -53,7 +56,7 @@ const experiences: ExperienceItemType[] = [
         employmentPeriod: { start: "2.2026", end: "7.2026" },
         employmentType: "Part-time",
         icon: <Code2 />,
-        isExpanded: true,
+        isExpanded: false,
         description:
           "- Worked on the AIESEC in Nepal website as part of the National Support Team.\n- Contributed to frontend development, interface implementation, and product features.\n- Built responsive interfaces and supported feature development.\n- Collaborated with the NST team during development and iteration of the platform.",
         skills: [
@@ -115,7 +118,7 @@ const volunteering: ExperienceItemType[] = [
     companyName: "CSITAN Rupandehi",
     companyLogo: "/company/Csitan-colorful.png",
     companyLogoDark: "/company/csitan-invert.png",
-    companyWebsite: "https://rupandehi.csitan.org.np",
+    companyWebsite: "https://rupandehi.csitan.org.np/",
     positions: [
       {
         id: "csitan-vp",
