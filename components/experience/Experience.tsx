@@ -25,7 +25,7 @@ const experiences: ExperienceItemType[] = [
     positions: [
       {
         id: "inovex-software-development-intern",
-        title: "Software Development Intern",
+        title: "Full-Stack Developer Intern",
         employmentPeriod: { start: "11.2026" },
         employmentType: "Internship",
         icon: <Code2 />,
