@@ -92,7 +92,12 @@ export function ExperienceItem({ experience }: ExperienceItemProps) {
   return (
     <div className="space-y-4 py-4">
       <div className="flex items-center gap-3 not-prose">
-        <div className="flex justify-center items-center bg-muted border border-muted-foreground/15 rounded-lg ring-1 ring-line ring-offset-1 ring-offset-background size-6 text-muted-foreground shrink-0">
+        <div
+          className={cn(
+            "flex justify-center items-center bg-muted border border-muted-foreground/15 rounded-lg ring-1 ring-line ring-offset-1 ring-offset-background size-6 text-muted-foreground shrink-0",
+            experience.companyLogoDark && "bg-zinc-600 dark:bg-muted",
+          )}
+        >
           {experience.companyLogo ? (
             <>
               <Image
@@ -103,7 +108,7 @@ export function ExperienceItem({ experience }: ExperienceItemProps) {
                 className={cn(
                   "size-5 object-contain",
                   experience.companyLogoClassName,
-                  experience.companyLogoDark && "dark:hidden",
+                  experience.companyLogoDark && "hidden dark:block",
                 )}
               />
               {experience.companyLogoDark && (
@@ -113,7 +118,7 @@ export function ExperienceItem({ experience }: ExperienceItemProps) {
                   width={40}
                   height={40}
                   className={cn(
-                    "hidden dark:block size-5 object-contain",
+                    "block dark:hidden size-5 object-contain",
                     experience.companyLogoClassName,
                   )}
                 />
@@ -203,13 +208,13 @@ export function ExperiencePositionItem({
           "data-disabled:before:content-none",
         )}
       >
-        <div className="z-1 relative flex items-start gap-3 mb-1 text-base">
+        <div className="z-1 relative flex items-start gap-3.75 mb-1 text-base">
           <div
             className={cn(
-              "flex justify-center items-center rounded-lg size-6 shrink-0",
+              "flex justify-center items-center mt-0.75 ml-0.75 rounded-md size-4.5 shrink-0",
               "bg-muted text-muted-foreground",
               "border border-muted-foreground/15 ring-1 ring-line ring-offset-1 ring-offset-background",
-              "[&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+              "[&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-2.5",
             )}
           >
             {position.icon ?? <BriefcaseBusinessIcon />}
