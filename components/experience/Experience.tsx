@@ -16,7 +16,7 @@ gsap.registerPlugin(useGSAP);
 const experiences: ExperienceItemType[] = [
   {
     id: "inovex-media-tech",
-    companyName: "Inovex Media Tech",
+    companyName: "Inovex Media & Tech",
     companyWebsite: "https://www.inovexmediatech.com/",
     companyLogo: "/company/innovex.png",
     companyLogoDark: "/company/white logo.png",
