@@ -15,6 +15,33 @@ gsap.registerPlugin(useGSAP);
 
 const experiences: ExperienceItemType[] = [
   {
+    id: "inovex-media-tech",
+    companyName: "Inovex Media Tech",
+    companyLogo: "/company/innovex.png",
+    companyLogoDark: "/company/white logo.png",
+    companyLogoClassName: "p-0.5",
+    isCurrentEmployer: true,
+    positions: [
+      {
+        id: "inovex-software-development-intern",
+        title: "Software Development Intern",
+        employmentPeriod: { start: "11.2026" },
+        employmentType: "Internship",
+        icon: <Code2 />,
+        isExpanded: true,
+        description:
+          "- Working on the maintenance, testing, and improvement of a Point of Sale (POS) system.\n- Collaborating with the development team to identify issues, improve functionality, and ensure application reliability.\n- Gaining hands-on experience with real-world software development practices and production applications.",
+        skills: [
+          "Software Maintenance",
+          "Software Testing",
+          "Debugging",
+          "Full-Stack Development",
+          "Bug Tracking",
+        ],
+      },
+    ],
+  },
+  {
     id: "aiesec-nepal",
     companyName: "AIESEC in Nepal",
     companyLogo: "/company/Aiesec-blue.png",

@@ -52,6 +52,8 @@ export type ExperienceItemType = {
   companyLogo?: string;
   /** Optional logo used in dark mode */
   companyLogoDark?: string;
+  /** Optional styling for both theme variants of the logo */
+  companyLogoClassName?: string;
   /** URL to the company's website. */
   companyWebsite?: string;
   /**
@@ -100,6 +102,7 @@ export function ExperienceItem({ experience }: ExperienceItemProps) {
                 height={40}
                 className={cn(
                   "size-5 object-contain",
+                  experience.companyLogoClassName,
                   experience.companyLogoDark && "dark:hidden",
                 )}
               />
@@ -109,7 +112,10 @@ export function ExperienceItem({ experience }: ExperienceItemProps) {
                   alt={experience.companyName}
                   width={40}
                   height={40}
-                  className="hidden dark:block size-5 object-contain"
+                  className={cn(
+                    "hidden dark:block size-5 object-contain",
+                    experience.companyLogoClassName,
+                  )}
                 />
               )}
             </>
